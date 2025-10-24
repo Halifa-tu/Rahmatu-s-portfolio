@@ -341,21 +341,12 @@
     <p class="text-sm">&copy; 2025 Rahmatu Abdulai. All rights reserved.</p>
   </footer>
 
-  <script>
-    lucide.createIcons();
-    const menuButton = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      const icon = menuButton.querySelector('i');
-      icon.setAttribute('data-lucide', mobileMenu.classList.contains('hidden') ? 'menu' : 'x');
-      lucide.createIcons();
-    });
-    const elementsToAnimate = document.querySelectorAll('.fade-in-up');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('active'));
-    }, { threshold: 0.1 });
-    elementsToAnimate.forEach(el => observer.observe(el));
-  </script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Main JS -->
+<script src="MAIN.js"></script>
+
+  
 </body>
 </html>
